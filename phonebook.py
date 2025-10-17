@@ -33,3 +33,42 @@ def initial_phonebook():
     print(phone_book)
     return phone_book
 
+def menu():
+    
+    print("*************************************************************************")
+    print("\t\t\t SMARTPHONE DIRECTORY")
+    print("*************************************************************************")
+    print("\tyou can now perform the following operations on this phonebook")
+    print("1. Add a new contact.")
+    print("2. Remove an existing contact.")
+    print("3.Delete all contacts.")
+    print("4.Search for an existing contact")
+    print("5.Diisplay all contacts.")
+    print("6 Exit phonebook")
+
+    choice = int(input("please enter your choice"))
+    return choice
+def add_contact(pb):
+
+    dip = []
+    for i in range(len(pb[0])): 
+        if i == 0:
+            dip.append (str(input("Enter name")))
+        if i == 1:
+            dip.append  (int(input("enter number")))   
+
+        if i == 2:
+            dip.append  (str(input("enter e-mail"))) 
+        if i == 3:
+            dip.append  (int(input("enter date of birth"))) 
+        if i == 4:
+            dip.append  (int(input("enter category")))         
+
+    pb.append(dip)
+
+    return pb
+def remove_existing(pb):
+    query = str(input("please enter the removed contact that you wish"))
+    temp = 0
+    for i in range(len(pb)):
+        if query == 
