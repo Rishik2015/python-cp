@@ -34,13 +34,39 @@
 
 #removing files with prefix
 
-file1 = open('demo.txt','r')
+# file1 = open('demo.txt','r')
 
-file2 = open('demoUpdated.txt','w')
+# file2 = open('demoUpdated.txt','w')
 
-for line in file1.readlines():
-    if not(line.startswith("Coding")):
-        print(line)
-        file2.write(line)
-file1.close()      
-file2.close()  
+# for line in file1.readlines():
+#     if not(line.startswith("Coding")):
+#         print(line)
+#         file2.write(line)
+# file1.close()      
+# file2.close()  
+
+# with open ("demo.txt","a") as f:
+#     f.write("hello world")
+# with open ("demo.txt","r")  as f:
+#     print(f.read())  
+#     f.close()
+
+# with open ("demo.txt","r") as file :
+#     data = file.readlines()
+#     print ("Words in this file are..................")
+#     for line in data :
+#         word = line.split()
+#         print(word)
+# file.close()
+
+
+# new_file = open ("newpy.txt","x")
+# new_file.close()
+
+import os
+if os.path.exists('newpy.txt'):
+     os.remove("newpy.txt")
+else:
+     print("the file does not exist")
+    
+
