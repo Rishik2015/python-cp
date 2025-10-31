@@ -40,5 +40,10 @@ def pick():
     if guess != number:
         print("nope."+ str(number))  
   
-intro()
-pick()
+
+playagain="yes"
+while playagain=="yes" or playagain=="y"or playagain=="yes"or playagain=="YES":
+    intro()
+    pick()
+    print("do you wanna play again?")
+    playagain=input()
