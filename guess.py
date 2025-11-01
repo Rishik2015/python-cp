@@ -18,7 +18,7 @@ def pick():
         enter=input("guess:")
         try:
             guess =  int(enter)
-            if guess<=10 and guess<=1:
+            if guess<=10 and guess>=1:
                 guessesTaken=guessesTaken+1
                 if guessesTaken<100:
                     if guess>number:
