@@ -4,7 +4,7 @@ player__wins = 0
 computer__wins = 0
 while True:
     player = input("enter a choice(rock paper scissors)")
-    choices = ["rock","paper","scissors"]
+    choices = ["rock","paper",  "scissors"]
     computer = random.choice(choices)
     print(f"\nyou chose {player} ,computer chose {computer}")
     if player == computer:
