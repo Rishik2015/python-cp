@@ -1,0 +1,53 @@
+import random 
+import time
+number = random.randint(1,100)
+def intro():
+    print("May I please ask your silly name")
+
+    global name 
+    name = input()
+    print(name + "we are going to play a silly goose game. I am thinking of a number between 1 to 100")
+    if(number%2 == 0):
+        x='even'
+    else:
+        x = 'odd'     
+
+    print("\nThis is an {} number".format(x))    
+    time.sleep(.5)
+    print("go ahead guess silly goose")
+
+def pick():
+    gt = 0
+    while gt <7:
+        time.sleep(.25)
+        enter = input("guess: ")
+        try :
+            guess = int(enter)
+            if guess<=100 and guess >=1:
+                gt =gt+1
+                if gt<7:
+                    if guess<number:
+                        print("it is too low")
+                    if guess>number:
+                        print("too high")    
+                    if guess!=number:
+                        time.sleep(.25)
+                        print("try again you sill y  goose")
+                    if guess==number:
+                        break
+            if guess>100 or guess<1:
+                print("IT is not in the range")   
+                time.sleep(.25)     
+                print(" enter between 1 to 100")
+        except :
+            print("i dont think that"+ enter +"is a number")       
+    if guess == number         :
+        gt  = str(gt)
+        print('good job , {} , you guessed it in  {}'format.(name , gt))
+    if guess != number:
+        print("i was thinking of" + str(number))
+playagain ='yes' 
+while playagain== 'yes' or playagain== 'y'  or playagain=='YES' :   
+    intro()
+    pick()
+    print("do you want to play again")
