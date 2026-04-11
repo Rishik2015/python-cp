@@ -43,7 +43,7 @@ def pick():
             print("i dont think that"+ enter +"is a number")       
     if guess == number         :
         gt  = str(gt)
-        print('good job , {} , you guessed it in  {}'format.(name , gt))
+        print('good job , {} , you guessed it in  {}'.format(name , gt))
     if guess != number:
         print("i was thinking of" + str(number))
 playagain ='yes' 
