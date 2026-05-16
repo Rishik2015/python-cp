@@ -16,8 +16,26 @@ pygame.init()
 SCREEN_WIDTH , SCREEN_HEIHT = 500 , 500
 display_surface = pygame.display.set_mode((SCREEN_WIDTH , SCREEN_HEIHT))
 
-bg_image = pygame.transform.sxale(
+bg_image = pygame.transform.sXale(
     pygame.image.load('images').convert(),(SCREEN_WIDTH , SCREEN_HEIHT))
 batman_image = pygame .transform .scale(pygame.image.load('batman').convert_alpha(),(200,200))
 batman_rect = batman_image.get_rect(center=(SCREEN_WIDTH // 2,
         SCREEN_HEIHT // 2 -50))
+text = pygame.font.Font("Times New Roman",36).render('HELLO WORLD',True,pygame.color.black)
+text_rect = text.get_rect(center=(SCREEN_WIDTH // 2,SCREEN_HEIHT // 2 + 110))
+def game_loop():
+    clock = pygame.time.Clock()
+    running = True
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+        display_surface.blit(images, (0,0))        
+        display_surface.blit(batman_image,batman_rect) 
+        display_surface.blit(text , text_rect) 
+
+        pygame.display.flip()
+        clock.tick(30)
+    pygame.quit()    
+if __name__ == '__main__'   :
+    game_loop() 
