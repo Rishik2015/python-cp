@@ -57,4 +57,3 @@ def fire_bullet(x,y)        :
      global bullet_state
      bullet_state = "fire"
      screen.blit(bulletimg,(x + 16 , y+ 10))
-def
